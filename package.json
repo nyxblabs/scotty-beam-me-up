@@ -1,6 +1,6 @@
 {
   "name": "scotty-beam-me-up",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "🛸 Get an available TCP port to listen",
   "author": "Dennis Ollhoff <contact@nyxb.xyz>",
   "license": "MIT",
@@ -26,7 +26,7 @@
     "dev": "vitest",
     "lint": "eslint --ext ts .",
     "prepack": "buildkarium",
-    "release": "nyxr test && nyxr build && nyxlx changeloge@latest --release && pnpm publish && git push --follow-tags",
+    "release": "nyxr test && nyxr build && nyxlx changelogen@latest --release && pnpm publish && git push --follow-tags",
     "test": "nyxr lint && vitest run"
   },
   "dependencies": {},
