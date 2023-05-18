@@ -1,0 +1,48 @@
+{
+  "name": "scotty-beam-me-up",
+  "version": "0.0.1",
+  "description": "🛸 Get an available TCP port to listen",
+  "author": "Dennis Ollhoff <contact@nyxb.xyz>",
+  "license": "MIT",
+  "hompage": "https://💻nyxb.ws",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nyxblabs/scotty-beam-me-up.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nyxblabs/scotty-beam-me-up/issues"
+  },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "buildkarium",
+    "dev": "vitest",
+    "lint": "eslint --ext ts .",
+    "prepack": "buildkarium",
+    "release": "nyxr test && nyxr build && nyxlx changeloge@latest --release && pnpm publish && git push --follow-tags",
+    "test": "nyxr lint && vitest run"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@nyxb/eslint-config": "0.0.53",
+    "@types/node": "^18.16.1",
+    "@vitest/coverage-c8": "^0.30.1",
+    "eslint": "^8.40.0",
+    "dynot": "latest",
+    "typescript": "latest",
+    "buildkarium": "latest",
+    "vitest": "^0.30.1"
+  },
+  "packageManager": "pnpm@8.5.1",
+  "files": [
+    "dist"
+  ],
+  "keywords": []
+}
